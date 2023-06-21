@@ -1,0 +1,162 @@
+/**
+ * 企画提案書用
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Mono:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+@page {
+    size: 210mm 297mm;
+    margin-block: 31mm;
+    margin-inline: 23mm;
+}
+
+:root {
+    /* ベース文字サイズ */
+    font-size: 13q;
+    /* ベース行送り */
+    line-height: 24q;
+    /* 自動文字組み */
+    text-spacing: auto;
+    /* 孤立行 */
+    widows: 1;
+    orphans: 1;
+
+    font-family: 'Noto Serif JP', serif;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+thead,
+dt {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+}
+
+pre,
+code {
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+@page :nth(1) {
+    counter-reset: p;
+}
+
+@page {
+    counter-increment: p;
+
+    @bottom-center {
+        content: counter(p);
+    }
+}
+
+@page {
+    @top-left {
+        content: "企画提案書";
+    }
+
+    @top-right {
+        content: "第2編集部　向井浩太郎";
+    }
+}
+
+table,
+ul,
+dl {
+    margin-block: 1em;
+}
+
+ul {
+    padding-inline-start: 1.5em;
+}
+
+li,
+ol {
+    padding-inline-start: 0.5em;
+}
+
+dt {
+    display: inline;
+    margin-inline-end: 1em;
+}
+
+dd {
+    display: inline;
+    margin-inline-start: 0;
+}
+
+dd:after {
+    content: "\a";
+    display: block;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+table thead {
+    border-bottom: 1px solid;
+}
+
+table tr:first-of-type {
+    border-top: 1px solid;
+}
+
+table tr:last-of-type {
+    border-bottom: 1px solid;
+}
+
+table th,
+table td {
+    padding-inline: 0.5em;
+}
+
+table img {
+    max-width: 100mm;
+    height: auto;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+    text-indent: 1em;
+    margin-block: 0;
+}
+
+.toc {
+    column-count: 2;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.footnote {
+    /**
+     * <span class="footnote"></span>で脚注（ページ下部）
+     * [^n]記法はドキュメント末尾に表示される
+     */
+    float: footnote;
+    text-indent: 0;
+}
+
+::footnote-call {
+    /* 本文側 */
+    content: counter(footnote);
+    font-size: 0.75em;
+    position: relative;
+    inset-block-start: -0.5em;
+}
+
+::footnote-marker {
+    /* 脚注側 */
+    content: counter(footnote) ". ";
+}
