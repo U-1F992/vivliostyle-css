@@ -135,6 +135,7 @@ p {
 
 .toc {
     column-count: 2;
+    margin-top: 0em;
 }
 
 .footnote {
