@@ -159,3 +159,7 @@ p {
     /* 脚注側 */
     content: counter(footnote) ". ";
 }
+
+pre {
+    white-space: pre-wrap;
+}
