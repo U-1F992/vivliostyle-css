@@ -4,6 +4,22 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans+Mono:wght@400;700&family=Noto+Serif+JP:wght@400;700&display=swap');
 
+@font-face {
+    font-family: 'Noto Sans Mono CJK JP';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://github.com/notofonts/noto-cjk/raw/main/Sans/Mono/NotoSansMonoCJKjp-Regular.otf);
+}
+
+@font-face {
+    font-family: 'Noto Sans Mono CJK JP';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://github.com/notofonts/noto-cjk/raw/main/Sans/Mono/NotoSansMonoCJKjp-Bold.otf);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -41,7 +57,7 @@ dt {
 
 pre,
 code {
-    font-family: 'Noto Sans Mono', monospace;
+    font-family: 'Noto Sans Mono CJK JP', 'Noto Sans Mono', monospace;
 }
 
 @page :nth(1) {
