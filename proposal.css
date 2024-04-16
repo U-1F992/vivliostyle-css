@@ -26,8 +26,12 @@
 
 @page {
     size: 210mm 297mm;
-    margin-block: 31mm;
-    margin-inline: 23mm;
+    margin-block: 15mm;
+    margin-inline: 18mm;
+}
+
+body {
+    /* background-color: #bbbbbb; */
 }
 
 :root {
@@ -53,6 +57,10 @@ thead,
 dt {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: bold;
+}
+
+h1 {
+    line-height: 40Q;
 }
 
 pre,
